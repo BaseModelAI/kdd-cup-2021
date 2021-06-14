@@ -1,0 +1,1 @@
+ROOT = '.' # path to data directory
