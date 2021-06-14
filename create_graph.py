@@ -29,7 +29,7 @@ def create_graph(params):
 
     edges = np.concatenate((edge_index_paper_cites_paper, edge_index_paper_cites_paper_symmetric,
                        edge_index_autor_paper,edge_index_autor_paper_symmetric), axis=1)
-    
+
     del edge_index_autor_paper_symmetric
     del edge_index_autor_paper
     del edge_index_paper_cites_paper_symmetric

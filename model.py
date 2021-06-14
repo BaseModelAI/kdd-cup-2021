@@ -2,10 +2,10 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 
+
 class Model(nn.Module):
-    def __init__(self, input_dim_sketch, hidden_size, num_classes):
+    def __init__(self, input_dim, hidden_size, num_classes):
         super().__init__()
-        input_dim = input_dim_sketch + 768 + num_classes * 29 + 21 * 16
         self.l1 = nn.Linear(input_dim, hidden_size)
         self.l2 = nn.Linear(hidden_size, hidden_size)
         self.l3 = nn.Linear(hidden_size, hidden_size)

@@ -29,7 +29,7 @@ class KDDTrainer(pl.LightningModule):
         print(f"Training loss: {np.mean([i['loss'].item() for i in losses])}")
         print(f'Training accuracy: {self.train_acc.compute().item()}')
         self.train_acc.reset()
-    
+
     def validation_step(self, batch, batch_idx: int):
         output = self(batch)
         val_loss = F.cross_entropy(output, batch['target'].long())
@@ -39,7 +39,7 @@ class KDDTrainer(pl.LightningModule):
     def validation_epoch_end(self, out):
         print(f'Validation accuracy: {self.valid_acc.compute().item()}')
         self.valid_acc.reset()
-    
+
 
     def test_step(self, batch, batch_idx: int):
         output = self(batch)
@@ -51,7 +51,7 @@ class KDDTrainer(pl.LightningModule):
         print(f"Test loss: {np.mean([i.item() for i in out])}")
         print(f'Test accuracy: {self.test_acc.compute().item()}')
         self.test_acc.reset()
-        
+
     def configure_optimizers(self):
         optimizer = torch.optim.AdamW(self.model.parameters(), lr=self.learning_rate)
         scheduler = {

@@ -16,7 +16,7 @@ def get_parser():
 
 def get_final_predictions(dataset_idx, num_ensembles, working_dir):
     idx2output_all = {}
-    
+
     for ensemble_id in range(num_ensembles):
         print(f"Predictions from {ensemble_id} ensemble")
         predictions = []

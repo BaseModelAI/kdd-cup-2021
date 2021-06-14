@@ -21,7 +21,7 @@ def find_paper_authors(paper_id, edge_author_paper_sorted_by_paper):
 
 
 class KddcupDataset(Dataset):
-    def __init__(self, idxs, bert_features, edge_author_paper_sorted_by_paper, edges_paper_cite_paper_sorted_by_first, edges_paper_cite_paper_sorted_by_second, 
+    def __init__(self, idxs, bert_features, edge_author_paper_sorted_by_paper, edges_paper_cite_paper_sorted_by_first, edges_paper_cite_paper_sorted_by_second,
                 paper2thesameauthors_papers, codes_inst, codes_inst2id, paper2inst, n_codes_inst, codes_memmap_bert, year, n_codes_bert,
                 sketch_dim_paper, sketch_dim_institution, dataset, node_label_all, y_cleora_propagation):
         self.idxs = idxs

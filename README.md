@@ -1,3 +1,5 @@
+# Synerise at KDD Cup 2021: The paper citation challenge
+
 Implementation of our solution to [KDD CUP Challenge](https://ogb.stanford.edu/kddcup2021/mag240m). The goal of the challenge is to predict the subject areas of papers situated in the heterogeneous graph in MAG240M-LSC dataset.
 
 ## Requirements

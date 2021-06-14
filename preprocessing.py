@@ -97,9 +97,9 @@ def preprocess(working_dir):
     idxs_labelled = get_labelled_idxs(dataset)
 
     edge_author_paper = np.load(f'{ROOT}/mag240m_kddcup2021/processed/author___writes___paper/edge_index.npy', mmap_mode='r')
-    
+
     autors_with_labelled_papers, edge_idx = find_authors_with_labels(edge_author_paper, idxs_labelled)
-    
+
     # author->paper edges but only for authors with labelled papers
     edge_author_paper_small = edge_author_paper[:,edge_idx]
     np.save(f'{working_dir}/edge_author_paper_small', edge_author_paper_small)

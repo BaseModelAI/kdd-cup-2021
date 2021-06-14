@@ -21,7 +21,7 @@ def compute_sketches(params):
 
     # bert vectors
     features = np.load(f'{ROOT}/mag240m_kddcup2021/processed/paper/node_feat.npy', mmap_mode='r')
-    
+
     N = 5_000_000
     idxs = random.sample(range(features.shape[0]), N)
     print(f"Getting {N} random nodes")
