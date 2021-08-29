@@ -1,6 +1,10 @@
-# Synerise at KDD Cup 2021: The paper citation challenge
+# Synerise at KDD Cup 2021: Predicting papers’ subject areas in a heterogeneous academic graph
 
-Implementation of our solution to [KDD CUP Challenge](https://ogb.stanford.edu/kddcup2021/mag240m). The goal of the challenge is to predict the subject areas of papers situated in the heterogeneous graph in MAG240M-LSC dataset.
+Implementation of our solution to [KDD CUP Challenge](https://ogb.stanford.edu/kddcup2021/mag240m). The goal of the challenge was to predict the subject areas of papers situated in the heterogeneous graph in MAG240M-LSC dataset.
+
+Practical Relevance: The volume of scientific publication has been increasing exponentially, doubling every 12 years. Currently, subject areas of arXiv papers are manually determined by the paper’s authors and arXiv moderators. An accurate automatic predictor of papers’ subject categories not only reduces the significant burden of manual labeling, but can also be used to classify the vast number of non-arXiv papers, thereby allowing better search and organization of academic papers.
+
+Graph: 121M academic papers in English extracted from MAG to construct a heterogeneous academic graph. The resultant paper set is written by 122M author entities, who are affiliated with 26K institutes. Among these papers, there are 1.3B citation links captured by MAG. Each paper is associated with its natural language title and most papers’ abstracts are also available. We concatenate the title and abstract by period and pass it to a RoBERTa sentence encoder [2,3], generating a 768-dimensional vector for each paper node. Among the 121M paper nodes, approximately 1.4M nodes are arXiv papers annotated with 153 arXiv subject areas, e.g., cs.LG (Machine Learning).
 
 ## Requirements
 * Python 3.8
