@@ -57,7 +57,7 @@ def train(params):
 
     print("Loading data")
     ORIG_DATA_DIR = os.path.join(ROOT, 'mag240m_kddcup2021/processed')
-    node_label_all = np.load(f'{ROOT}mag240m_kddcup2021/processed/paper/node_label.npy')
+    node_label_all = np.load(f'{ROOT}/mag240m_kddcup2021/processed/paper/node_label.npy')
     year = np.load(os.path.join(ORIG_DATA_DIR, 'paper/node_year.npy'))
     bert_features = np.load(os.path.join(ORIG_DATA_DIR, 'paper/node_feat.npy'), mmap_mode='r')
     edges_paper_cite_paper_sorted_by_first = np.load(os.path.join(ORIG_DATA_DIR, 'paper___cites___paper/edge_index.npy'), mmap_mode='r')
